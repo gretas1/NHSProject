@@ -18,13 +18,24 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void login() {
+    public void TC1() {
         userName.sendKeys(ConfigReader.readProperty("NHS_username"));
         password.sendKeys(ConfigReader.readProperty("NHS_password"));
     }
 
     public void signIn() {
         signInButton.click();
+    }
+
+    public void TC2() {
+        userName.sendKeys(ConfigReader.readProperty("NHS_username"));
+        password.sendKeys("admin1234");
+    }
+
+    public void TC3() {
+        userName.sendKeys(ConfigReader.readProperty("NHS_username"));
+        password.sendKeys("");
+
     }
 
 
