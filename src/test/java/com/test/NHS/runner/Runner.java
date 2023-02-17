@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",//content
         glue = "com/test/NHS/stepdefinitions",//source
-        dryRun = true,
+        dryRun = false,
         tags = "@regression",
         plugin = {"pretty", "html:target/uiReport.html", "rerun:target/uiFailedTests.txt"}
 
